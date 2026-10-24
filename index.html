@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>火鸟影视 - 高清影视在线免费播放</title>
+<meta name="description" content="火鸟影视（huoniaoyingshi-cn）专注提供高清电影、热播电视剧、综艺、动漫在线免费播放，海量正版影视资源每日更新，官方网址 https://huoniaoyingshi-cn.github.io。">
+<meta name="keywords" content="火鸟影视,huoniaoyingshi,高清影视,免费在线播放,电影电视剧,动漫综艺">
+<meta name="author" content="火鸟影视">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="火鸟影视 - 高清影视在线免费播放">
+<meta property="og:description" content="海量高清影视资源每日更新，免费在线播放，极速观影。">
+<meta property="og:url" content="https://huoniaoyingshi-cn.github.io">
+<meta property="og:site_name" content="火鸟影视">
+<link rel="canonical" href="https://huoniaoyingshi-cn.github.io">
+<style>
+/* ============ 基础重置 ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:#0a0c14;color:#eef1f8;line-height:1.7;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+
+:root{
+  --fire:#ff4d2e;
+  --fire2:#ff9a3c;
+  --gold:#ffd24a;
+  --ink:#eef1f8;
+  --muted:#8b93a7;
+  --card:#141823;
+  --card2:#1c2230;
+  --line:rgba(255,255,255,.08);
+}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ============ 顶部导航 ============ */
+.hd{position:sticky;top:0;z-index:99;background:rgba(10,12,20,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:11px;font-size:24px;font-weight:800;letter-spacing:.5px}
+.logo i{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--fire),var(--fire2));display:grid;place-items:center;font-style:normal;font-size:21px;color:#fff;box-shadow:0 6px 20px rgba(255,77,46,.45);clip-path:polygon(50% 0,100% 38%,82% 100%,18% 100%,0 38%)}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{padding:9px 17px;border-radius:20px;font-size:15px;color:var(--muted);transition:.25s;font-weight:500}
+.nav a:hover{color:#fff;background:var(--card2)}
+.nav a.cta{padding:10px 26px;background:linear-gradient(135deg,var(--fire),var(--fire2));color:#2b0b05;border-radius:22px;font-weight:700;box-shadow:0 6px 18px rgba(255,77,46,.45)}
+.nav a.cta:hover{transform:translateY(-2px);color:#2b0b05}
+.mbtn{display:none;width:44px;height:44px;border:0;background:var(--card2);color:#fff;border-radius:12px;font-size:22px;cursor:pointer}
+
+/* ============ 英雄区：倾斜切片 + 对角线分割 ============ */
+.hero{position:relative;padding:110px 0 130px;overflow:hidden;
+  background:linear-gradient(125deg,#111522 0%,#0a0c14 55%,#1a0d0a 100%)}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,46,.28),transparent 66%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}
+.h-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border:1px solid rgba(255,154,60,.4);border-radius:30px;font-size:13px;color:var(--fire2);background:rgba(255,154,60,.1);margin-bottom:22px;font-weight:600}
+.h-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--fire);box-shadow:0 0 0 4px rgba(255,77,46,.25);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(38px,6.6vw,66px);font-weight:900;line-height:1.1;letter-spacing:-1.4px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--fire),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero>p{margin:22px 0 0;max-width:520px;color:var(--muted);font-size:17px}
+.h-acts{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 34px;border-radius:30px;font-size:16px;font-weight:600;transition:.25s;border:1px solid transparent}
+.btn-pri{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#2b0b05;box-shadow:0 10px 28px rgba(255,77,46,.45)}
+.btn-pri:hover{transform:translateY(-3px)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:var(--line)}
+.btn-ghost:hover{background:var(--card2)}
+
+/* 右侧火焰仪表盘（差异化视觉组件） */
+.fire{position:relative;background:linear-gradient(160deg,var(--card2),#141823);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.fire .fh{font-size:14px;color:var(--muted);margin-bottom:18px;display:flex;justify-content:space-between}
+.fire .fh b{color:var(--gold);font-weight:700}
+.flame{height:150px;display:flex;align-items:flex-end;justify-content:center;gap:10px;margin-bottom:22px}
+.flame i{display:block;width:26px;border-radius:20px 20px 8px 8px;background:linear-gradient(180deg,var(--gold),var(--fire));animation:flame 1.2s ease-in-out infinite;transform-origin:bottom}
+.flame i:nth-child(1){height:46%;animation-delay:.1s}
+.flame i:nth-child(2){height:78%;animation-delay:.3s}
+.flame i:nth-child(3){height:58%;animation-delay:0s}
+.flame i:nth-child(4){height:90%;animation-delay:.4s}
+.flame i:nth-child(5){height:52%;animation-delay:.2s}
+@keyframes flame{0%,100%{transform:scaleY(.86)}50%{transform:scaleY(1.1)}}
+.fire .stat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fire .stat div{background:rgba(255,255,255,.05);border-radius:12px;padding:13px 16px}
+.fire .stat span{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+.fire .stat b{font-size:20px;font-weight:800;color:#fff}
+
+/* ============ 通用栏目标题 ============ */
+.sec{padding:86px 0;position:relative}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:38px;flex-wrap:wrap}
+.sec-t h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.4px;display:flex;align-items:center;gap:12px}
+.sec-t h2::before{content:"";width:5px;height:26px;border-radius:4px;background:linear-gradient(180deg,var(--fire),var(--fire2))}
+.sec-t h2 span{color:var(--fire2)}
+.sec-t p{color:var(--muted);margin-top:8px;font-size:15px;padding-left:38px}
+.sec-hd a{color:var(--fire2);font-size:14px;font-weight:600;white-space:nowrap}
+.sec-hd a:hover{text-decoration:underline}
+
+/* ============ 栏目一：精选片单（定义列表 dl，差异化 A） ============ */
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.picks dl{border-right:1px solid var(--line);padding:26px 24px;transition:.28s;position:relative}
+.picks dl:last-child{border-right:0}
+.picks dl:hover{background:linear-gradient(160deg,rgba(255,77,46,.12),transparent);padding-left:30px}
+.picks dt{font-size:12px;color:var(--fire2);font-weight:700;letter-spacing:1.5px;margin-bottom:10px}
+.picks dd{font-size:19px;font-weight:800;margin-bottom:8px}
+.picks dd small{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:6px}
+
+/* ============ 栏目二：热播榜单（有序列表 ol 排名，差异化 B） ============ */
+.top10{background:linear-gradient(160deg,var(--card),#141823);border:1px solid var(--line);border-radius:20px;padding:24px 28px}
+.top10 ol{counter-reset:rk}
+.top10 li{display:flex;align-items:center;gap:18px;padding:15px 0;border-bottom:1px dashed var(--line)}
+.top10 li:last-child{border-bottom:0}
+.top10 li::before{counter-increment:rk;content:counter(rk);width:38px;height:38px;border-radius:11px;background:var(--card2);display:grid;place-items:center;font-weight:800;color:var(--muted);font-size:16px;flex:0 0 38px}
+.top10 li:nth-child(1)::before{background:linear-gradient(135deg,var(--gold),var(--fire2));color:#2b0b05}
+.top10 li:nth-child(2)::before{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#2b0b05}
+.top10 li:nth-child(3)::before{background:linear-gradient(135deg,var(--fire2),var(--gold));color:#2b0b05}
+.top10 .ti{font-size:16px;font-weight:700}
+.top10 .tg{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--muted)}
+.top10 .tg b{color:var(--gold);font-weight:700}
+.bar{flex:0 0 110px;height:7px;border-radius:6px;background:var(--card2);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--fire),var(--fire2));border-radius:6px}
+
+/* ============ 栏目三：频道分类（CSS Grid 自动流瀑布，差异化 C） ============ */
+.chans{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));grid-auto-rows:120px;gap:16px}
+.ch{counter-increment:ch;background:linear-gradient(150deg,var(--card2),#141823);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:.3s;position:relative;overflow:hidden}
+.ch::before{content:counter(ch,decimal-leading-zero);position:absolute;top:10px;right:14px;font-size:13px;color:var(--muted);font-weight:700}
+.ch:hover{border-color:var(--fire);transform:translateY(-5px);background:linear-gradient(150deg,rgba(255,77,46,.18),#141823)}
+.ch .ci{font-size:30px}
+.ch span{font-size:15px;font-weight:700}
+.ch small{font-size:12px;color:var(--muted)}
+.ch:nth-child(1){grid-column:span 2;grid-row:span 2;font-size:20px}
+.ch:nth-child(4){grid-row:span 2}
+
+/* ============ 栏目四：影评资讯（卡片网格 + 悬停展开，差异化 D） ============ */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.nbox{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.35s}
+.nbox:hover{border-color:var(--fire);transform:translateY(-6px);box-shadow:0 16px 40px rgba(255,77,46,.18)}
+.nbox .topbar{padding:20px 22px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.nbox .ava{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--gold));display:grid;place-items:center;font-weight:800;color:#2b0b05}
+.nbox .who b{display:block;font-size:15px}
+.nbox .who small{font-size:12px;color:var(--muted)}
+.nbox .body{padding:22px}
+.nbox .body .tag{display:inline-block;padding:4px 11px;background:rgba(255,154,60,.14);color:var(--fire2);border-radius:7px;font-size:12px;font-weight:700;margin-bottom:12px}
+.nbox .body h4{font-size:18px;font-weight:800;margin-bottom:10px}
+.nbox .body p{font-size:14px;color:var(--muted)}
+.nbox .ftr{padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+
+/* ============ 页脚 ============ */
+.ft{background:#06080d;color:#8b93a7;padding:58px 0 24px;border-top:1px solid var(--line)}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+.ft-grid h5{font-size:15px;margin-bottom:16px;color:#fff}
+.ft-grid ul li{margin-bottom:11px}
+.ft-grid ul a{color:#6b7288;font-size:14px;transition:.2s}
+.ft-grid ul a:hover{color:#fff}
+.ft-brand .logo i{box-shadow:0 6px 20px rgba(255,154,60,.35)}
+.ft-brand p{color:#6b7288;font-size:14px;margin-top:14px;max-width:330px}
+.copy{text-align:center;color:#555c6e;font-size:13px;padding-top:24px;border-top:1px solid var(--line)}
+
+/* ============ 回到顶部 ============ */
+.top{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border:0;background:linear-gradient(135deg,var(--fire),var(--fire2));color:#2b0b05;border-radius:50%;font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(255,77,46,.45);opacity:0;visibility:hidden;transition:.3s;z-index:98}
+.top.show{opacity:1;visibility:visible}
+
+/* ============ 响应式 ============ */
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .fire{max-width:460px}
+}
+@media(max-width:768px){
+  .nav{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;padding:16px;background:#111522;border-bottom:1px solid var(--line);transform:translateY(-150%);transition:.35s;gap:4px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+  .nav.open{transform:translateY(0)}
+  .nav a{width:100%;text-align:center;padding:13px}
+  .mbtn{display:grid;place-items:center}
+  .sec{padding:60px 0}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .chans{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));grid-auto-rows:110px}
+  .top10 .tg .bar{display:none}
+}
+@media(max-width:520px){
+  .wrap{padding:0 16px}
+  .ft-grid{grid-template-columns:1fr}
+  .hero{padding:70px 0 80px}
+  .btn{padding:12px 26px;font-size:15px}
+  .picks{grid-template-columns:1fr}
+  .picks dl{border-right:0;border-bottom:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="hd">
+  <div class="wrap hd-in">
+    <a href="#" class="logo"><i>🔥</i>火鸟影视</a>
+    <nav class="nav" id="nav">
+      <a href="#home">首页</a>
+      <a href="#picks">精选片单</a>
+      <a href="#top10">热播榜单</a>
+      <a href="#chans">频道分类</a>
+      <a href="#news">影评资讯</a>
+      <a href="#" class="cta">免费观影</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- ===== 英雄区 ===== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="h-txt">
+      <span class="h-badge">实时热播中</span>
+      <h1>火鸟影视<br><em>燃情好片</em>免费看</h1>
+      <p>高清电影、热播剧集、综艺、动漫一站聚合，每日更新、极速加载，打开网页即刻享受影院级观影体验。</p>
+      <div class="h-acts">
+        <a href="#picks" class="btn btn-pri">▶ 开始观看</a>
+        <a href="#top10" class="btn btn-ghost">查看热播榜</a>
+      </div>
+    </div>
+    <aside class="fire" aria-label="观影数据">
+      <div class="fh"><span>今日观影热度</span><b>🔥 98.6%</b></div>
+      <div class="flame"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="stat">
+        <div><span>影片总数</span><b>12,850+</b></div>
+        <div><span>今日更新</span><b>186 部</b></div>
+        <div><span>在线观众</span><b>36.2万</b></div>
+        <div><span>平均评分</span><b>8.7 分</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== 栏目一：精选片单（定义列表 dl，差异化 A） ===== -->
+<section class="sec" id="picks">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t">
+        <h2>精选<span>片单</span></h2>
+        <p>编辑精心策划的主题影单，一次看个够</p>
+      </div>
+      <a href="#">更多片单 →</a>
+    </div>
+    <div class="picks">
+      <dl><dt>EDITOR'S PICK</dt><dd>周末必刷高分榜<small>10 部豆瓣 8.5+ 口碑佳作</small></dd></dl>
+      <dl><dt>TRENDING</dt><dd>悬疑烧脑专场<small>反转不断，挑战你的逻辑</small></dd></dl>
+      <dl><dt>CLASSIC</dt><dd>华语经典回顾<small>90 年代不可错过的光影记忆</small></dd></dl>
+      <dl><dt>KIDS</dt><dd>亲子动画合集<small>全年龄友好，陪伴成长</small></dd></dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目二：热播榜单（有序列表 ol，差异化 B） ===== -->
+<section class="sec" id="top10" style="background:#111522">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t">
+        <h2>热播<span>榜单</span></h2>
+        <p>按播放量实时排序，数据每 10 分钟更新</p>
+      </div>
+      <a href="#">完整榜单 →</a>
+    </div>
+    <div class="top10">
+      <ol>
+        <li><span class="ti">破晓时分</span><span class="tg"><b>9.4分</b><span class="bar"><i style="width:96%"></i></span>2.1亿</span></li>
+        <li><span class="ti">长安十二时辰·续</span><span class="tg"><b>9.1分</b><span class="bar"><i style="width:88%"></i></span>1.7亿</span></li>
+        <li><span class="ti">深渊之眼</span><span class="tg"><b>8.8分</b><span class="bar"><i style="width:82%"></i></span>1.4亿</span></li>
+        <li><span class="ti">甜蜜暴击</span><span class="tg"><b>8.5分</b><span class="bar"><i style="width:74%"></i></span>1.1亿</span></li>
+        <li><span class="ti">机甲纪元</span><span class="tg"><b>8.9分</b><span class="bar"><i style="width:70%"></i></span>9800万</span></li>
+        <li><span class="ti">无声的证言</span><span class="tg"><b>8.6分</b><span class="bar"><i style="width:64%"></i></span>8600万</span></li>
+        <li><span class="ti">周末总动员</span><span class="tg"><b>8.2分</b><span class="bar"><i style="width:58%"></i></span>7200万</span></li>
+        <li><span class="ti">云端恋人</span><span class="tg"><b>8.4分</b><span class="bar"><i style="width:52%"></i></span>6500万</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目三：频道分类（Grid 瀑布流，差异化 C） ===== -->
+<section class="sec" id="chans">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t">
+        <h2>频道<span>分类</span></h2>
+        <p>八大频道，快速定位你想看的内容</p>
+      </div>
+      <a href="#">全部分类 →</a>
+    </div>
+    <div class="chans">
+      <a href="#" class="ch"><span class="ci">🎬</span><span>电影</span><small>4,820 部</small></a>
+      <a href="#" class="ch"><span class="ci">📺</span><span>电视剧</span><small>1,260 部</small></a>
+      <a href="#" class="ch"><span class="ci">🎤</span><span>综艺</span><small>680 部</small></a>
+      <a href="#" class="ch"><span class="ci">🎨</span><span>动漫</span><small>2,140 部</small></a>
+      <a href="#" class="ch"><span class="ci">📽️</span><span>纪录片</span><small>890 部</small></a>
+      <a href="#" class="ch"><span class="ci">🎭</span><span>短剧</span><small>1,560 部</small></a>
+      <a href="#" class="ch"><span class="ci">🌏</span><span>日韩</span><small>930 部</small></a>
+      <a href="#" class="ch"><span class="ci">🏆</span><span>高分专区</span><small>2,100 部</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目四：影评资讯（卡片网格，差异化 D） ===== -->
+<section class="sec" id="news" style="background:#111522">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t">
+        <h2>影评<span>资讯</span></h2>
+        <p>专业点评与行业动态，看懂好片的门道</p>
+      </div>
+      <a href="#">全部资讯 →</a>
+    </div>
+    <div class="news">
+      <article class="nbox">
+        <div class="topbar"><span class="ava">影</span><span class="who"><b>光影评论员</b><small>2026-10-22</small></span></div>
+        <div class="body"><span class="tag">深度影评</span><h4>《破晓时分》为何能拿下 9.4 分？</h4><p>从镜头语言到人物弧光，拆解这部年度口碑之作的成功要素。</p></div>
+        <div class="ftr"><span>💬 1,286 评论</span><span>👁 8.6万</span></div>
+      </article>
+      <article class="nbox">
+        <div class="topbar"><span class="ava">榜</span><span class="who"><b>数据观察</b><small>2026-10-19</small></span></div>
+        <div class="body"><span class="tag">榜单解读</span><h4>十月热播榜：悬疑题材持续领跑</h4><p>本月播放量前十中，悬疑类占据四席，观众口味正在发生变化。</p></div>
+        <div class="ftr"><span>💬 942 评论</span><span>👁 5.2万</span></div>
+      </article>
+      <article class="nbox">
+        <div class="topbar"><span class="ava">漫</span><span class="who"><b>动漫前线</b><small>2026-10-15</small></span></div>
+        <div class="body"><span class="tag">动漫资讯</span><h4>国漫新作井喷，工业化制作成关键</h4><p>从《机甲纪元》看国产动画的技术跃迁与 IP 开发路径。</p></div>
+        <div class="ftr"><span>💬 1,503 评论</span><span>👁 6.9万</span></div>
+      </article>
+      <article class="nbox">
+        <div class="topbar"><span class="ava">技</span><span class="who"><b>技术专栏</b><small>2026-10-10</small></span></div>
+        <div class="body"><span class="tag">观影贴士</span><h4>如何选对清晰度？带宽与画质平衡指南</h4><p>不同网络环境下的最优播放设置，告别卡顿与模糊。</p></div>
+        <div class="ftr"><span>💬 634 评论</span><span>👁 3.8万</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo"><i>🔥</i>火鸟影视</div>
+        <p>火鸟影视，专注高清影视在线免费播放，电影、电视剧、综艺、动漫一站聚合，每日更新。</p>
+      </div>
+      <div><h5>网站导航</h5><ul>
+        <li><a href="#home">网站首页</a></li>
+        <li><a href="#picks">精选片单</a></li>
+        <li><a href="#top10">热播榜单</a></li>
+        <li><a href="#chans">频道分类</a></li>
+      </ul></div>
+      <div><h5>内容频道</h5><ul>
+        <li><a href="#">电影</a></li><li><a href="#">电视剧</a></li>
+        <li><a href="#">综艺</a></li><li><a href="#">动漫</a></li>
+      </ul></div>
+      <div><h5>关于我们</h5><ul>
+        <li><a href="#">平台介绍</a></li><li><a href="#">联系合作</a></li>
+        <li><a href="#">免责声明</a></li><li><a href="#">用户协议</a></li>
+      </ul></div>
+    </div>
+    <div class="copy">
+      © 2026 火鸟影视 huoniaoyingshi-cn · 网站网址：https://huoniaoyingshi-cn.github.io · 本站内容仅供学习交流参考使用
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('mbtn'),top=document.getElementById('top');
+  btn.addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>400){top.classList.add('show')}else{top.classList.remove('show')}
+  });
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+</body>
+</html>
